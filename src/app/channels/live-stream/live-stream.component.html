@@ -1,0 +1,29 @@
+<div class="site-wrapper">
+  <div class="timeline-chart-container">
+    <div class="timeline-chart-inner">
+      <div class="timeline-chart">
+        <div class="table">
+          <div *ngFor="let item of streamDetails?.channelIds" class="t-row day day-1">
+            <div class="td day-head"><span>Channels {{item.name}}</span> <span></span></div>
+            <div class="td day-body">
+              <div class="table time-blocks" *ngFor="let chan of getChannelEventFilter(item)">
+                <div class="t-column" >
+                  <!-- <span class="date-color">{{chan.start | date: 'shortDate'}}</span> -->
+                  <div class="td span8 filled" style="height: 56px">
+                   {{chan.name}} {{chan.start | date: 'shortTime'}} - {{chan.end | date: 'shortTime'}}
+                  </div>
+                  <div
+                    class="td span3 filled {{color}}"
+                    style="height: 56px; width: auto;"
+                  >
+                  {{chan.tags}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

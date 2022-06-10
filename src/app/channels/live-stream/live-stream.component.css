@@ -1,0 +1,245 @@
+html {
+  box-sizing: border-box;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+
+}
+
+.site-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    /* min-height: auto; */
+    /* height: 100%; */
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.timeline-chart-container {
+    background-color: #11256C;
+    padding: 1.25em;
+}
+
+.timeline-chart-inner {
+    max-width: 72.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-chart {
+    position: relative;
+}
+
+.timeline-chart .table {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.timeline-chart .chart-bg {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-left: 56px;
+    box-sizing: border-box;
+}
+
+.timeline-chart .table .day {
+    box-sizing: border-box;
+    padding-left: 56px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 1.5em;
+}
+
+.timeline-chart .table .t-row {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: auto;
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+.timeline-chart .table .day-head {
+    color: #FFF9EB;
+    width: 47px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-family: "Basis Grotesque Mono",Monaco,"Lucida Console",monospace;
+    padding-top: 1.5em;
+}
+
+.timeline-chart .table .day-head span {
+    font-size: .875em;
+    display: block;
+    text-transform: uppercase;
+}
+
+.timeline-chart .table .day-head span:last-child {
+    font-weight: 700;
+    font-size: 3.428571429em;
+}
+
+.timeline-chart .table .td {
+    box-sizing: border-box;
+    display: block;
+}
+
+.timeline-chart .table {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.timeline-chart .table .t-row {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: auto;
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+.timeline-chart .chart-bg .table .td.filled, .timeline-chart .day-body .table .td.filled {
+    background: #1C56FB;
+    color: #FFF9EB;
+}
+
+.timeline-chart .chart-bg .table .td.span2, .timeline-chart .day-body .table .td.span2 {
+    width: 7.692307692%;
+}
+
+.timeline-chart .chart-bg .table .td.span3, .timeline-chart .day-body .table .td.span3 {
+    width: 11.538461538%;
+    /* font-size: small; */
+}
+
+.timeline-chart .chart-bg .table .td.span4, .timeline-chart .day-body .table .td.span4 {
+    width: 15.384615384%;
+}
+
+.timeline-chart .chart-bg .table .td.span6, .timeline-chart .day-body .table .td.span6 {
+    width: 23.076923076%;
+}
+
+.timeline-chart .chart-bg .table .td.span7, .timeline-chart .day-body .table .td.span7 {
+    width: 26.923076922%;
+}
+
+.timeline-chart .chart-bg .table .td.span9, .timeline-chart .day-body .table .td.span9 {
+    width: 34.615384614%;
+}
+
+.timeline-chart .chart-bg .table .td.span11, .timeline-chart .day-body .table .td.span11 {
+    width: 42.307692306%;
+}
+
+.timeline-chart .chart-bg .table .td.span15, .timeline-chart .day-body .table .td.span15 {
+    width: 57.69230769%;
+}
+
+.timeline-chart .chart-bg .table .td.filled.bg-brand-lime, .timeline-chart .day-body .table .td.filled.bg-brand-lime {
+    background-color: #63F79E;
+    color: #11256C;
+}
+
+.timeline-chart .chart-bg .table .td.filled.bg-brand-aqua, .timeline-chart .day-body .table .td.filled.bg-brand-aqua {
+    background-color: #24CCDF;
+    color: #11256C;
+}
+
+.timeline-chart .chart-bg .table .td.filled.bg-brand-purple, .timeline-chart .day-body .table .td.filled.bg-brand-purple {
+    background-color: #903FC7;
+}
+
+@media (min-width: 75em) {
+.timeline-chart .chart-bg .bg-table {
+    border-right: 1px solid rgba(255,249,235,.25);
+}
+}
+
+.timeline-chart .chart-bg .bg-table {
+    height: 100%;
+}
+
+.timeline-chart .table {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.timeline-chart .chart-bg .table .td.marker:first-child,
+.timeline-chart .day-body .table .td.marker:first-child {
+    border-left: 1px solid rgba(255,249,235,.25);
+}
+
+.timeline-chart .chart-bg .table .td.marker, .timeline-chart .day-body .table .td.marker {
+    position: relative;
+}
+
+.timeline-chart .chart-bg .table .td, .timeline-chart .day-body .table .td {
+    font: 700 .8125em/1.333333333 "Basis Grotesque Mono",Monaco,"Lucida Console",monospace;
+    text-transform: uppercase;
+    /* letter-spacing: 1px; */
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    padding: 11px;
+}
+
+.timeline-chart .chart-bg .bg-table .t-row, .timeline-chart .chart-bg .bg-table .td {
+    height: 100%;
+}
+
+.timeline-chart .table .td {
+    box-sizing: border-box;
+    display: block;
+    margin: 5px;
+}
+.timeline-chart .chart-bg .table .td.marker span, .timeline-chart .day-body .table .td.marker span {
+    color: #FFF9EB;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font: 700 .875em/1 "Basis Grotesque Mono",Monaco,"Lucida Console",monospace;
+    padding-left: 5px;
+}
+
+.timeline-chart .chart-bg .table .td.filled + .filled:before, .timeline-chart .day-body .table .td.filled + .filled:before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #11256C;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1px;
+}
+
+.timeline-chart .chart-bg .table .td.marker:after, .timeline-chart .day-body .table .td.marker:after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255,249,235,.25);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1px;
+}
+.date-color {
+  color: aliceblue;
+}
